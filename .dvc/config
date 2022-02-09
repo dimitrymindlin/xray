@@ -1,0 +1,4 @@
+[core]
+    remote = xray
+['remote "xray"']
+    url = https://github.com/dimitrymindlin/xray/data
