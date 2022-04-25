@@ -10,11 +10,12 @@ dependencies:
   - torchvision
   - tqdm
   - matplotlib
-  - opencv
   - scikit-learn
   - paramiko
   - imgaug
   - plotly
+  - pip
   - pip:
+      - opencv-python==4.1.2.30
       - torchgan
       - imutils
