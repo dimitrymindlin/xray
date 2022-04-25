@@ -21,13 +21,13 @@ data_path = "dataset/MURA-v1.1/train"
 
 def filenames(parts: List[str], train=True):
     root = '../tensorflow_datasets/downloads/cjinny_mura-v11/'
-    root = '/Users/dimitrymindlin/tensorflow_datasets/downloads/cjinny_mura-v11/'
+    #root = '/Users/dimitrymindlin/tensorflow_datasets/downloads/cjinny_mura-v11/'
     if train:
         csv_path = "../tensorflow_datasets/downloads/cjinny_mura-v11/MURA-v1.1/train_image_paths.csv"
-        csv_path = "/Users/dimitrymindlin/tensorflow_datasets/downloads/cjinny_mura-v11/MURA-v1.1/train_image_paths.csv"
+        #csv_path = "/Users/dimitrymindlin/tensorflow_datasets/downloads/cjinny_mura-v11/MURA-v1.1/train_image_paths.csv"
     else:
         csv_path = "../tensorflow_datasets/downloads/cjinny_mura-v11/MURA-v1.1/valid_image_paths.csv"
-        csv_path = "/Users/dimitrymindlin/tensorflow_datasets/downloads/cjinny_mura-v11/MURA-v1.1/valid_image_paths.csv"
+        #csv_path = "/Users/dimitrymindlin/tensorflow_datasets/downloads/cjinny_mura-v11/MURA-v1.1/valid_image_paths.csv"
 
     with open(csv_path, 'rb') as F:
         d = F.readlines()
