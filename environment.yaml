@@ -10,7 +10,7 @@ dependencies:
   - torchvision
   - tqdm
   - matplotlib
-  - opencv=4.1.2.30
+  - opencv
   - scikit-learn
   - paramiko
   - imgaug
