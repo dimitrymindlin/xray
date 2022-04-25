@@ -160,7 +160,7 @@ class AdaptiveHistogramEqualization(object):
         Initialize adaptive histogram equalization
         :param active: activate adaptive histogram equlization when true
         """
-        self.clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8, 8))
+        self.clahe = cv2.createCLAHE(clipLimit=1.0, tileGridSize=(7, 7))
         self.active = active
 
     def __call__(self, sample):

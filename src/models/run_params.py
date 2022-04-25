@@ -21,8 +21,8 @@ COMMON_PARAMS = {
     'data_source': 'XR_HAND_PHOTOSHOP',
     'pipeline': {
         'hist_equalisation': True,
-        'otsu_filter': False,
-        'adaptive_hist_equilization': False,
+        'otsu_filter': True,
+        'adaptive_hist_equilization': True,
         'normalisation': (0, 1),
     },
     'random_seed': [42, 4242, 424242, 42424242],
@@ -99,7 +99,7 @@ MODEL_SPECIFIC_PARAMS = {
     'SAGAN': {
         'augmentation': DEFAULT_AUGMENTATION,
         'batch_size': 16,
-        'image_resolution': (128, 128),
+        'image_resolution': (320, 320),
         'num_epochs': 500,
         'masked_loss_on_val': True,
         'gelr': 0.001,

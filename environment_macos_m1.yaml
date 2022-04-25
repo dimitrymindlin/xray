@@ -1,0 +1,21 @@
+name: xray
+channels:
+  - conda-forge
+  - apple
+  - defaults
+  - intel
+dependencies:
+  - mlflow
+  - pytorch
+  - pandas
+  - torchvision
+  - tqdm
+  - matplotlib
+  - opencv
+  - scikit-learn
+  - paramiko
+  - imgaug
+  - plotly
+  - pip:
+      - torchgan
+      - imutils

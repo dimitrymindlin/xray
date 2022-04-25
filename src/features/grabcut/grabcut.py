@@ -16,7 +16,7 @@ sys.path.append("..")
 POSITIVE_IMAGE_PATHS = []
 NEGATIVE_IMAGE_PATHS = []
 
-os.chdir(r'../../../data/TensorFlow/workspace/training_demo/images')
+q"""os.chdir(r'../../../data/TensorFlow/workspace/training_demo/images')
 
 for r, d, f in os.walk('showcase_sample/positive/'):
     for file in f:
@@ -27,9 +27,9 @@ for r, d, f in os.walk('showcase_sample/negative/'):
     for file in f:
         if '.png' in file:
             NEGATIVE_IMAGE_PATHS.append(os.path.join(r, file))
-
-
-img = cv.imread(POSITIVE_IMAGE_PATHS[4])
+"""
+path = '../../data/dataset/MURA-v1.1/train/XR_HAND/patient09734/study1_positive/image2.png'
+img = cv.imread(path)
 plt.figure(1)
 plt.imshow(img)
 

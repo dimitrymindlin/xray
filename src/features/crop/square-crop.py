@@ -2,10 +2,8 @@
 import numpy as np
 import cv2 as cv
 import imutils
-import os
 import sys
-from glob import glob
-from os.path import basename, dirname
+from matplotlib import pyplot as plt
 
 from src import DATA_PATH
 
@@ -97,7 +95,7 @@ def main():
     """
     Runs script to find and crop squares from the data folder with predefined
     folder structure /patient_folder/inner_folder/xxx.png
-    """
+    
     patients_cnt = 0
     missing_patients = 0
     img_exists = False
@@ -138,10 +136,20 @@ def main():
     if missing_patients > 0:
         print("Missing data of " + str(missing_patients) + " patients")
     print("Processed patients: " + str(patients_cnt))
-    print('Done')
+    print('Done')"""
+    fn = '../../data/dataset/MURA-v1.1/train/XR_HAND/patient00084/study1_positive/image2.png'
+    img = cv.imread(fn)
+    plt.imshow(img)
+    plt.show()
+    squares = find_squares(img)
+    cv.drawContours(img, squares, 0, (0, 255, 0), 3)
+    warped = crop_squares(squares, img)
+    plt.imshow(warped)
+    plt.show()
+    print("done...")
 
 
 if __name__ == '__main__':
-    print(__doc__)
+    #print(__doc__)
     main()
     # cv.destroyAllWindows()
