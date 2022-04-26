@@ -16,6 +16,6 @@ dependencies:
   - plotly
   - pip
   - pip:
-      - opencv-python==4.1.2.30
+      - opencv-python==3.4.17.63
       - torchgan
       - imutils
